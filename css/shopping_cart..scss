@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Libre Baskerville", serif;
+  font-size: 14px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #9ad3bc;
+  color: #f3eac2;
+
+  .nav_header {
+    font-size: 2.5rem;
+  }
+
+  .nav_cart {
+    position: relative;
+
+    button {
+      background: none;
+      border: 0;
+      color: #f3eac2;
+      cursor: pointer;
+      outline:none;
+
+      i {
+        font-size: 1.75rem;
+      }
+    }
+
+    .total_quantity {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: -15px;
+      top: -15px;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: #f5b461;
+    }
+
+    .cart_dropdown {
+      position: absolute;
+      right: 0;
+      top: 30px;
+      width: 12rem;
+      background-color: #cfd3ce;
+      border: 2px solid #839b97;
+      border-radius: 10px;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+      font-size: 1.3rem;
+      overflow: auto;
+
+      .cart_dropdown_list {
+        list-style: none;
+
+        li {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .product {
+        margin: 2.5rem;
+        padding: 1rem;
+        border: 2px solid #839b97;
+        border-radius: 10px;
+
+        &_header {
+            margin: 1rem auto;
+            text-align: center;        
+        }
+
+        &_image {
+            margin: 1rem auto;
+            width: 300px;
+            height: 250px;
+
+        }
+
+        &_description {
+            margin-top: 1rem;
+        }
+
+        h3 {
+          margin-top: 1rem;
+        }
+
+        .cart {
+            margin-top: 2rem;
+            text-align: center;
+
+            &_button {
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: #839b97;;
+                border: 0;
+                border-radius: 10px;
+                color: white;
+                font-weight: 900;
+                cursor: pointer;
+                outline:none;
+            }
+
+            &_quantity {
+                margin: 0 1rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
